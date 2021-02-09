@@ -1,8 +1,7 @@
 print("¡Hola mundo python!")
-print("Nombre: ")
-Nombre= input()
-print("Apellido: ")
-Apellido= input()
+Nombre= input("Nombre: ")
+
+Apellido= input("Apellido: ")
 
 User= Nombre+Apellido
 
