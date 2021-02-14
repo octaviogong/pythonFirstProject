@@ -1,6 +1,6 @@
 print("¡Hola mundo python!")
-Nombre= input("Nombre: ")
 
+Nombre= input("Nombre: ")
 Apellido= input("Apellido: ")
 
 User= Nombre+Apellido
