@@ -37,7 +37,7 @@ def validar_telefono(telefono): #Declaracion de la función que validará teléf
 def validar_rfc(rfc): #Declaracion de la función que validará RFC
     #Expresion regular para validar rfc
 
-    expresion_regular_rfc = r'[A-Z]{4}[0-9]{6}$'
+    expresion_regular_rfc = r'[A-Z]{4}[0-9]{6}[A-Z0-9]{3}$'
 #Comparación unica con la expresion regular
 
     if re.match(expresion_regular_rfc, rfc) is not None:
@@ -48,7 +48,7 @@ def validar_rfc(rfc): #Declaracion de la función que validará RFC
 def validar_curp(curp): #Declaracion de la función que validará CURP
     # Expresion regular para validar CURP
 
-    expresion_regular_curp = r'[A-Z]{4}[0-9]{6}[H,M]{1}[A-Z]{5}[0-9]{2}$'
+    expresion_regular_curp = r'[A-Z]{4}[0-9]{6}[HM]{1}[A-Z]{5}[0-9]{2}$'
 
     # Comparación unica con la expresion regular
 
