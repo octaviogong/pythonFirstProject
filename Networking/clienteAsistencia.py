@@ -10,7 +10,7 @@ def main ():
 
     s.connect((host, port))
 
-    estudiante = Estudiante("Octavio Gonzalez", "20111430@tecguanajuato.edu.mx", "Octaviogong")
+    estudiante = Estudiante('Octavio Gonzalez', '20111430@tecguanajuato.edu.mx', 'Octaviogong')
     estudiante_seriado = pickle.dumps(estudiante)
 
     s.send(estudiante_seriado)
@@ -18,5 +18,7 @@ def main ():
     res = s.recv(1024)
 
     print(f"Respuesta: \n\t{res.decode()}")
+    print("Adios")
+    pass
 
     s.close()
