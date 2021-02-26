@@ -4,7 +4,7 @@ class Estudiante:
     __correo = ''
     __contra = None
 
-    def _init_(self, nombre, correo, contra):
+    def __init__(self, nombre, correo, contra):
         self.__nombre = nombre
         self.__correo = correo
         self.__contra = contra
