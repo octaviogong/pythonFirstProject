@@ -19,7 +19,7 @@ def main ():
 
     print(f"Respuesta: \n\t{res.decode()}")
     print("Adios")
-    pass
+
 
     s.close()
 if __name__ == '__main__':
