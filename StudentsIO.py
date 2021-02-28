@@ -1,5 +1,7 @@
 from mongoengine import *
 import datetime
+from pprint import pprint
+
 
 connect('IECA',host='localhost', port=27017)
 
@@ -9,7 +11,7 @@ class Post(Document):
     _correo = StringField(required=True, max_length=50)
     _contrasena = StringField(required=True, max_length=50)
     _materias = ListField(StringField(required=True,max_length=20))
-    _published = DateField(default=datetime.datetime.now())
+    _published = DateField(default=datetime.datetime.now(None))
 
 print('Ingreso de estudiantes a base de datos IECA\n')
 print('1.- Agregar estudiante')
@@ -18,6 +20,9 @@ print('3.- Actualizar estudiantes')
 print('4.- Eliminar estudiante')
 print('5.- Salir\n')
 select = int(input("Seleccion: "))
+
+
+
 
 if __name__ == '__main__':
 
@@ -43,13 +48,14 @@ if __name__ == '__main__':
             select = int(input("Seleccion: "))
 
         elif select == 2:
+
             for p in Post.objects:
-                 print(p._nombre)
-                 print(p._correo)
-                 print(p._materias)
+                pprint(p._nombre)
+                pprint(p._correo)
+                pprint(p._materias)
 
             select = int(input("Seleccion: "))
 
         elif select == 3:
-                 pass
+            pass
 
