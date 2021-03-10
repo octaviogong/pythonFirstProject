@@ -3,7 +3,12 @@ import re #Libreria para expresiones regulares
 def validar_correo(correo): #Declaracion de la funcion que validará correo
 
 #Expresion regular para correos tipo Ej. juan.valenzuela@curso.python.mx
-    expresion_regular_correo= r'[\w-]{1,20}\.[\w-]{1,20}@\w{2,5}\.\w{2,6}\.\w{1,2}$'
+    # [PV] Da como error con el correo: juan@cinvestav.mx
+    # expresion_regular_correo= r'[\w-]{1,20}\.[\w-]{1,20}@\w{2,5}\.\w{2,6}\.\w{1,2}$'
+
+    # [PV] Sugerencia
+    expresion_regular_correo= r'([\w-]{1,20}\.)?[\w-]{1,20}@(\)w{2,5}\.)?\w{3,15}\.\w{1,2}$'
+
 
     if re.match(expresion_regular_correo, correo) is not None:
        print('Correo VALIDO')

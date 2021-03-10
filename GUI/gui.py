@@ -3,6 +3,8 @@ from PySide2.QtWidgets import QMainWindow
 import sys
 from ejemplo import *
 
+# [PV] No se conecta a la BD
+# [PV] La tarea se trataba de hacer GUI para la tarea 4
 
 class Ejemplo(QMainWindow):
 
